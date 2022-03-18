@@ -1,14 +1,7 @@
-# vue-project
+# VueJS Netflix like
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+A simple frontend copy of Netflix using VueJS 3 with Vite.
+[Live demo](https://airone-dev.github.io/VueJS-Netflix/)
 
 ## Project Setup
 
@@ -26,6 +19,12 @@ npm run dev
 
 ```sh
 npm run build
+```
+
+### Compile & publish to github branch (use for github.io page)
+
+```sh
+npm run publish
 ```
 
 ### Lint with [ESLint](https://eslint.org/)

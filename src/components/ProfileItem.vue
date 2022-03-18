@@ -22,8 +22,9 @@ export default {
 
 <template>
   <div :class="'profile' + (editing ? ' profile--editing' : '')">
-    <div @click="clickProfile(profile)" class="profile-img" :style="'background-image: url(/assets/img/profile/'+profile.img+')'">
-      <div v-if="editing && profile.img !== '../addProfile.png'" class="profile-editing"></div>
+    <div @click="clickProfile(profile)" class="profile-img" :style="'background-image: url(assets/img/profile/'+profile.img+')'">
+<!--      background image is in a style attribute because durgin vite compilation, it replace with right relative path-->
+      <div v-if="editing && profile.img !== '../addProfile.png'" class="profile-editing" :style="'background-image: url(assets/img/edit-icon.svg)'"></div>
     </div>
     <span class="profile-name">{{ profile.name }}</span>
   </div>
@@ -44,7 +45,6 @@ export default {
     width: 100%;
     height: 100%;
     background-color: #00000082;
-    background-image: url("assets/img/edit-icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
