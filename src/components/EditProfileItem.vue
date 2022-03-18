@@ -6,7 +6,7 @@ export default {
   components: { NavbarItem },
   data() {
     return {
-      profileId: window.location.hash.split('#edit-')[1]
+      profile: this.GLOBALS.profileList.find(profile => profile.id == window.location.hash.split('#edit-')[1]),
     };
   },
   methods: {
@@ -17,7 +17,7 @@ export default {
 <template>
   <NavbarItem />
   <div class="container">
-    Edition profil {{profileId}}
+    Edition profil {{profile}}
     <a href="#edit">
       <button>Retour</button>
     </a>

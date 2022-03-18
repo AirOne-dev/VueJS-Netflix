@@ -7,14 +7,6 @@ export default {
   components: { NavbarItem, ProfileItem },
   data() {
     return {
-      profileList: [
-        // { name: "Camille", img:"../logo.png" },
-        { id: 1, name: "laurent", img:"notre_planete-susct.png" },
-        { id: 2, name: "Will Smith (Erwan)", img:"carmen_sandiego-cbqxm.png" },
-        { id: 3, name: "Dorian", img:"chasseurs_de_trolls-byuru.png" },
-        { id: 4, name: "Maë", img:"dark_crystal-bjxvk.png" },
-        { id: 0, name: "Ajouter un profil", img:"../addProfile.png" },
-      ],
       manageProfiles: window.location.hash === '#edit',
     };
   },
@@ -32,7 +24,7 @@ export default {
   <div class="container">
     <span class="container-title">{{!manageProfiles ? 'Qui est-ce ?' : 'Gestion des profils :'}}</span>
     <div class="container-profileList">
-      <ProfileItem v-for="profile in profileList" :profile="profile" :editing="manageProfiles" />
+      <ProfileItem v-for="profile in GLOBALS.profileList" :profile="profile" :editing="manageProfiles" />
     </div>
     <div @click="switchManage" class="container-manageProfilesButton">Gérer les profils</div>
   </div>
