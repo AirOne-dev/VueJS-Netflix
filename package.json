@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --port 8080 --host",
-    "build": "vite build",
+    "build": "vite build && cd dist && git init && git branch -m build && git add -A && git commit -m 'build' && git push https://github.com/AirOne-dev/VueJS-Netflix.git build:build --force",
     "preview": "vite preview --port 5050",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
